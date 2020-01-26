@@ -64,6 +64,7 @@ h1 {
 .overlay {
   position:absolute!important;
   margin:0px!important;
+  display:flex
 }
 .scored {
   transition:opacity ease-in .2s;
