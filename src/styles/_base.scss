@@ -1,0 +1,11 @@
+body {
+  height:100%;
+  font-family: 'Darker Grotesque', Verdana;
+  background-color: $main-color;
+  color: $text-color;
+}
+a {
+  color: $text-color;
+  text-decoration: none;
+  font-weight: 700;
+}

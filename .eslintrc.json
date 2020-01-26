@@ -1,0 +1,14 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "jquery": true
+    },
+    "rules": {
+        "no-console": "off",
+        "prettier/prettier": "error"
+    },
+    "plugins": ["prettier"],
+    "extends": ["plugin:prettier/recommended"]
+}

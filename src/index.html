@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <h1>TAP GAME v1.0</h1>
+  <header class="flex">
+    <span>Choose your level:</span>
+    <select name="" id="level">
+      <option value="1">Beginner</option>
+      <option value="2">Intermediate</option>
+      <option value="3">Professional</option>
+    </select>
+    <button type="button" id="go">Go!</button>
+  </header>
+  <main class="flex">
+    <div class="flex wrap" id="gameContainer"></div>
+    
+  </main>
+  <div class="scored">
+    <div style="text-align:center;">
+      DONE!<br>
+      <a href="" onclick="location.reload()">Go back</a>
+    </div>
+  </div>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

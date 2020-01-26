@@ -1,0 +1,83 @@
+@import 'reset';
+@import 'vars';
+@import 'base';
+@import 'mixins';
+@import 'type';
+@import 'tables';
+@import 'forms';
+@import 'utilities';
+
+// components
+
+@import 'components/modal';
+@import 'components/submenu';
+span {
+  color:white;
+  margin-right:5px;
+}
+.flex {
+  justify-content: center;
+  display:flex;
+  margin:10px auto;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+h1 {
+  color: red;
+}
+.beginner, .intermediate, .professional {
+  div {
+    position:relative;
+    background-color: lightpink;
+    display:flex;
+    margin:5px;
+    border-radius:50%;
+    justify-content: center;
+    align-items: center;
+    border: 2px dotted lightsalmon;
+    font-size: 1000%;
+  }
+}
+.beginner {
+  width:800px;
+  div {
+    width:250px;
+    height:250px;
+  }
+}
+.intermediate {
+  width:1020px;
+  div {
+    width:240px;
+    height:240px;
+  }
+}
+.professional {
+  width:1300px;
+  div {
+    width:200px;
+    height:200px;
+    font-size: 800%;
+  }
+}
+.overlay {
+  position:absolute!important;
+  margin:0px!important;
+}
+.scored {
+  transition:opacity ease-in .2s;
+  opacity:0;
+  z-index:-1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: firebrick;
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  font-size:8rem;
+  color:white;
+}
