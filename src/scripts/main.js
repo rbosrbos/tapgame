@@ -1,6 +1,7 @@
 const elGo = document.querySelector('#go');
 const elContainer = document.querySelector('#gameContainer');
 const elScored = document.querySelector('.scored');
+const elGoBack = document.querySelector('#goBack');
 let elAllCells;
 let cellsHTML = '';
 let clicked = [];
@@ -109,4 +110,9 @@ function checkIfDone() {
     hasAnyLeft = 0;
   }
   hasAnyLeft = 0;
+}
+elGoBack.onclick = function() {
+  elContainer.innerHTML = '';
+  elScored.style.opacity = '0';
+  elScored.style.zIndex = '-1';
 }
