@@ -6,7 +6,6 @@ let elAllCells;
 let cellsHTML = '';
 let clicked = [];
 let timeout = [];
-let hasAnyLeft = 0;
 const icons = new Array(
   'glass',
   'music',
