@@ -55,6 +55,7 @@ elGo.onclick = function () {
       if (clicked.length < 2) {
         elAllCells[i].style.display = 'none';
         if (clicked.includes(elAllCells[i].attributes.placeholder.value)) {
+          usedIndexesArray.splice(usedIndexesArray.indexOf(elAllCells[i].attributes.placeholder.value),1);
           timeout.forEach(function (e) {
             clearTimeout(e);
           });
@@ -85,31 +86,23 @@ function fillContainer(n) {
     gridArray.push('<div><i class="fa fa-' + icons[iconIndex] + '"></i><div class="overlay" placeholder="fa-' + icons[iconIndex] + '"></div></div>');
     gridArray.push('<div><i class="fa fa-' + icons[iconIndex] + '"></i><div class="overlay" placeholder="fa-' + icons[iconIndex] + '"></div></div>');
   }
-  usedIndexesArray = [];
+  let divsIndexesArray = [];
   for (let i = 0; i < (n * 2); i++) {
     let arrayIndex = Math.floor(Math.random() * (n * 2));
-    while (usedIndexesArray.includes(arrayIndex)) {
+    while (divsIndexesArray.includes(arrayIndex)) {
       arrayIndex = Math.floor(Math.random() * (n * 2));
     }
-    usedIndexesArray.push(arrayIndex);
+    divsIndexesArray.push(arrayIndex);
     cellsHTML += gridArray[arrayIndex];
   }
   return cellsHTML;
 }
 
 function checkIfDone() {
-  for (let i = 0;i<elAllCells.length;i++) {
-    if (elAllCells[i].style.display == 'flex') {
-        hasAnyLeft = 1;
-      break;
-    }
-  }
-  if (hasAnyLeft == 0) {
-    elScored.style.opacity = '1';
-    elScored.style.zIndex = '2';
-    hasAnyLeft = 0;
-  }
-  hasAnyLeft = 0;
+if (usedIndexesArray.length == 0){
+  elScored.style.opacity = '1';
+  elScored.style.zIndex = '2';
+}
 }
 elGoBack.onclick = function() {
   elContainer.innerHTML = '';
