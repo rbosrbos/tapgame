@@ -13,7 +13,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
     "gulp-eslint": "^5.0.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "prettier": "^1.16.1",
     "purgecss": "^1.4.0"
   },
