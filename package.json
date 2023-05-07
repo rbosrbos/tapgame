@@ -18,7 +18,7 @@
     "purgecss": "^1.4.0"
   },
   "dependencies": {
-    "browser-sync": "^2.18.8",
+    "browser-sync": "^2.29.1",
     "browserify-shim": "^3.8.14",
     "codecat": "^0.1.0",
     "es6-promise": "*",
